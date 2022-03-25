@@ -1,0 +1,71 @@
+/* stylelint-disable */
+$base-font: 16px;
+
+@mixin font-size($font-size) {
+	font-size: $font-size;
+	font-size: ($font-size/$base-font)*1em;
+}
+
+body {
+	font-family: "CenturySchoolSB", Times New Roman, serif;
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased; /* Chrome, Safari */
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; /* Firefox */
+	text-rendering: optimizeLegibility;
+	color: $dark;
+	line-height: 1.2;
+}
+
+p {
+	font-family: "CenturySchoolSB", Times New Roman, serif;
+	margin-bottom: 16px;
+	color: $dark;
+	@include font-size(24px);
+	font-weight: normal;
+	line-height: 1.2;
+	letter-spacing: -0.03em;
+	word-spacing: -0.02em;
+}
+
+a {
+	color: $dark;
+	text-decoration: underline;
+	letter-spacing: -0.03em;
+	word-spacing: -0.02em;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	font-family: "Agrandir", Times New Roman, serif;
+	color: $dark;
+	@include font-size(100px);
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 40px;
+	word-wrap: break-word;
+	@include media-breakpoint-down(sm) {
+		@include font-size(32px);
+	}
+}
+
+h2 {
+	font-family: "Agrandir", Times New Roman, serif;
+	color: $dark;
+	@include font-size(60px);
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-family: "Agrandir", Times New Roman, serif;
+	color: $dark;
+	@include font-size(24px);
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0;	
+}

@@ -1,0 +1,36 @@
+//Background color
+body {
+	background-color: blue;
+}
+
+.scroll-lock {
+	overflow: hidden;
+}
+
+.g-40 {
+	padding: 0 40px;
+}
+
+//Shame
+.imgBox {
+	padding-bottom: 66.6666667%;
+	background-size: cover;
+	margin-bottom: 24px;
+	background-position: 50% 50%;
+}
+.imgCaption {
+	display: block;
+}
+
+.desktop-only {
+	display: flex !important;
+	@include media-breakpoint-down(sm) {
+		display: none !important;
+	}
+}
+.mobile-only {
+	display: none !important;
+	@include media-breakpoint-down(sm) {
+		display: flex !important;
+	}
+}
